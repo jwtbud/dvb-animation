@@ -1,0 +1,107 @@
+@import url(reset.css);
+
+// BASE
+
+// IMG
+	$img-url: url(../img/sprite.png);
+
+
+
+// CONTAINER
+
+	$container-width: 762px;
+	$container-height: 340px;
+
+
+// FONTS
+
+	$font-regular: 'arial';
+
+	$font-bold: 'arial' ;
+
+	$font-headline: 'arial';
+
+	.font-normal {
+		font-size: 11px;
+	}
+
+	.font-bigger {
+		font-size: 15px
+	}
+
+
+// COLORS
+
+	$link-color: #fff;
+	$link-hover-color: #000;
+
+	$suzuki-red: #e93943;
+	$drakblue-text-color: #002c42;
+
+	$fixmenu-color: #fff;
+	$fixmenu-hover-color: #000;
+	$fixmenu-active-color: #000;
+
+
+// BROWSERS BASE
+
+	@mixin transition($radius) {
+  -webkit-transition: $radius;
+     -moz-transition: $radius;
+      -ms-transition: $radius;
+       -o-transition: $radius;
+          transition: $radius;
+     }
+
+     @mixin border-radius($border-radius) {
+  -webkit-border-radius: $border-radius;
+     -moz-border-radius: $border-radius;
+      -ms-border-radius: $border-radius;
+       -o-border-radius: $border-radius;
+          border-radius: $border-radius;
+     }
+
+	@mixin opacity($opacity) {
+	opacity: $opacity;
+     }
+
+
+
+// LETS GO!
+
+	body {
+		margin-top: 50px;
+		@extend .font-normal;
+	}
+
+	.animation-box {
+		margin: auto;
+		width: $container-width;
+		height: $container-height + 60px;
+		display: block;
+		background: url(../img/bottom-shadow.png) 0px 310px no-repeat;
+	}
+
+	.animation {
+		background: url(../img/bg.jpg) top center no-repeat;
+		border: 1px solid #e7e7e7;
+		@include border-radius(5px);
+		width: $container-width - 4px;
+		box-shadow: 0 0 10px rgba(0,0,0,0.05), 0px 0px 15px rgba(200,200,200,0.3) inset;
+		height: $container-height;
+		display: block;
+		overflow: hidden;
+		position: relative;
+	}
+
+	.satellite-box {
+		position: absolute;
+		left: 100px;
+		top: 100px;
+		background: $img-url;
+		background-position: 0px -345px !important;
+		display: block;
+		height: 80px;
+		width: 253px;	
+		background-repeat: no-repeat;
+	}
