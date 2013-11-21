@@ -6,29 +6,260 @@
   font-size: 15px; }
 
 body {
-  margin-top: 50px; }
+  -webkit-font-smoothing: antialiased;
+  padding-bottom: 200px; }
 
 .animation-box {
+  margin-top: 50px !important;
   margin: auto;
   width: 762px;
   height: 400px;
   display: block;
-  background: url(../img/bottom-shadow.png) 0px 310px no-repeat; }
+  background: url(../img/bottom-shadow.png) 0px 320px no-repeat;
+  position: relative; }
+
+.animation-box:after {
+  display: block;
+  position: absolute;
+  bottom: -10px;
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 20px solid #000;
+  left: 350px;
+  z-index: 10;
+  content: '';
+  opacity: 0.03;
+  animation: arrowmove 10s infinite;
+  -webkit-animation: arrowmove 10s infinite; }
+
+@keyframes arrowmove {
+  0% {
+    bottom: -10px; }
+
+  50% {
+    bottom: 0px; }
+
+  100% {
+    bottom: -10px; } }
+
+@-webkit-keyframes arrowmove {
+  0% {
+    bottom: -10px; }
+
+  50% {
+    bottom: 0px; }
+
+  100% {
+    bottom: -10px; } }
 
 .animation {
   background: url(../img/bg.jpg) top center no-repeat;
-  border: 1px solid #e7e7e7;
+  border: 1px solid #efefef;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
   border-radius: 5px;
   width: 758px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05), 0px 0px 15px rgba(200, 200, 200, 0.3) inset;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), 0px 0px 15px rgba(200, 200, 200, 0.3) inset;
   height: 340px;
   display: block;
   overflow: hidden;
   position: relative; }
+
+ul#slides {
+  height: 340px;
+  margin: 0px; }
+  ul#slides li {
+    height: 338px;
+    position: relative; }
+
+.pagenumber {
+  background: url(../img/sprite.png);
+  background-position: 0px -427px !important;
+  display: block;
+  height: 60px;
+  line-height: 50px;
+  width: 58px;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 15px;
+  bottom: 5px;
+  float: left;
+  display: block;
+  color: #5db9e7;
+  font-size: 32px;
+  font-family: Arial;
+  text-align: center; }
+
+.slidecontent {
+  position: absolute;
+  height: 50px;
+  bottom: 10px;
+  left: 90px;
+  font-size: 13px;
+  line-height: 22px;
+  font-weight: bold;
+  text-shadow: 2px 2px 0px rgba(255, 255, 255, 0.9);
+  font-family: "arial", sans-serif;
+  letter-spacing: -0.5px;
+  text-align: justify;
+  width: 640px; }
+
+ul.icons {
+  position: relative;
+  padding-top: 10px;
+  z-index: 1; }
+  ul.icons li {
+    position: absolute;
+    width: 50px !important;
+    height: 50px !important;
+    display: block;
+    top: 0px;
+    float: left;
+    margin-left: 12px;
+    overflow: hidden;
+    background: url(../img/icons.png); }
+  ul.icons li.icon1 {
+    background-position: 0px 0px; }
+  ul.icons li.icon2 {
+    background-position: -62px 0px; }
+  ul.icons li.icon3 {
+    background-position: -124px 0px; }
+  ul.icons li.icon4 {
+    background-position: -186px 0px; }
+  ul.icons li.icon5 {
+    background-position: -247px 0px; }
+  ul.icons li.icon6 {
+    background-position: -309px 0px; }
+  ul.icons li.icon7 {
+    background-position: -371px 0px; }
+  ul.icons li.icon8 {
+    background-position: -431px 0px; }
+  ul.icons li.icon9 {
+    background-position: -495px 0px; }
+  ul.icons li.icon10 {
+    background-position: -556px 0px; }
+  ul.icons li.icon11 {
+    background-position: -619px 0px; }
+  ul.icons li.icon12 {
+    background-position: -681px 0px; }
+
+ul.icons.anim li {
+  animation: horizontalanim 10s infinite linear;
+  -webkit-animation: horizontalanim 10s infinite linear; }
+
+@keyframes horizontalanim {
+  0% {
+    top: -50px;
+    opacity: 0; }
+
+  1% {
+    top: -50px;
+    opacity: 1; }
+
+  99% {
+    top: 390px;
+    opacity: 1; }
+
+  100% {
+    top: 3900px;
+    opacity: 0; } }
+
+@-webkit-keyframes horizontalanim {
+  0% {
+    top: -50px;
+    opacity: 0; }
+
+  1% {
+    top: -50px;
+    opacity: 1; }
+
+  99% {
+    top: 390px;
+    opacity: 1; }
+
+  100% {
+    top: 390px;
+    opacity: 0; } }
+
+ul.icons.anim {
+  margin-top: -60px;
+  position: absolute;
+  opacity: 0.9; }
+  ul.icons.anim li.icon1 {
+    animation: horizontalanim 5s infinite linear !important;
+    -webkit-animation: horizontalanim 5s infinite linear !important; }
+  ul.icons.anim li.icon2 {
+    animation: horizontalanim 7s infinite linear !important;
+    -webkit-animation: horizontalanim 7s infinite linear !important;
+    -webkit-animation-delay: 2s !important; }
+  ul.icons.anim li.icon3 {
+    animation: horizontalanim 6s infinite linear !important;
+    -webkit-animation: horizontalanim 6s infinite linear !important;
+    -webkit-animation-delay: 4s !important; }
+  ul.icons.anim li.icon4 {
+    animation: horizontalanim 7.3s infinite linear !important;
+    -webkit-animation: horizontalanim 7.3s infinite linear !important;
+    -webkit-animation-delay: 5s !important; }
+  ul.icons.anim li.icon5 {
+    animation: horizontalanim 7s infinite linear !important;
+    -webkit-animation: horizontalanim 7s infinite linear !important;
+    -webkit-animation-delay: 1s !important; }
+  ul.icons.anim li.icon6 {
+    animation: horizontalanim 6s infinite linear !important;
+    -webkit-animation: horizontalanim 6s infinite linear !important;
+    -webkit-animation-delay: 8s !important; }
+  ul.icons.anim li.icon7 {
+    animation: horizontalanim 8s infinite linear !important;
+    -webkit-animation: horizontalanim 8s infinite linear !important;
+    -webkit-animation-delay: 5s !important; }
+  ul.icons.anim li.icon8 {
+    animation: horizontalanim 7.5s infinite linear !important;
+    -webkit-animation: horizontalanim 7.5s infinite linear !important;
+    -webkit-animation-delay: 2s !important; }
+  ul.icons.anim li.icon9 {
+    animation: horizontalanim 7.2s infinite linear !important;
+    -webkit-animation: horizontalanim 7.2s infinite linear !important;
+    -webkit-animation-delay: 6.5s !important; }
+  ul.icons.anim li.icon10 {
+    animation: horizontalanim 8.5s infinite linear !important;
+    -webkit-animation: horizontalanim 8.5s infinite linear !important;
+    -webkit-animation-delay: 3s !important; }
+  ul.icons.anim li.icon11 {
+    animation: horizontalanim 5.5s infinite linear !important;
+    -webkit-animation: horizontalanim 5.5s infinite linear !important;
+    -webkit-animation-delay: 6s !important; }
+  ul.icons.anim li.icon12 {
+    animation: horizontalanim 6.5s infinite linear !important;
+    -webkit-animation: horizontalanim 6.5s infinite linear !important;
+    -webkit-animation-delay: 8s !important; }
+
+.tvoff {
+  position: absolute;
+  left: -330px;
+  top: 20px;
+  background: url(../img/sprite.png);
+  background-position: -375px -345px !important;
+  display: block;
+  height: 240px;
+  width: 375px;
+  background-repeat: no-repeat;
+  z-index: 5; }
+
+.tvoff.animate {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  background: url(../img/sprite.png);
+  background-position: -375px -345px !important;
+  display: block;
+  height: 240px;
+  width: 375px;
+  background-repeat: no-repeat;
+  z-index: 5; }
 
 .satellite-box {
   position: absolute;
@@ -39,4 +270,85 @@ body {
   display: block;
   height: 80px;
   width: 253px;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  z-index: 2; }
+
+.arrow1 {
+  position: absolute;
+  right: 270px;
+  top: 110px;
+  background: url(../img/sprite.png);
+  background-position: -2px -495px !important;
+  display: block;
+  height: 55px;
+  width: 40px;
+  background-repeat: no-repeat;
+  z-index: 4;
+  animation: arrow1 2s infinite;
+  -webkit-animation: arrow1 2s infinite; }
+
+@keyframes arrow1 {
+  0% {
+    right: 275px; }
+
+  50% {
+    right: 265px; }
+
+  100% {
+    right: 275px; } }
+
+@-webkit-keyframes arrow1 {
+  0% {
+    right: 275px; }
+
+  50% {
+    right: 265px; }
+
+  100% {
+    right: 275px; } }
+
+.arrow2 {
+  position: absolute;
+  right: 130px;
+  top: 151px;
+  background: url(../img/sprite.png);
+  background-position: -50px -495px !important;
+  display: block;
+  height: 55px;
+  width: 40px;
+  background-repeat: no-repeat;
+  z-index: 4;
+  animation: arrow2 2s infinite;
+  -webkit-animation: arrow2 2s infinite; }
+
+@keyframes arrow2 {
+  0% {
+    right: 120px; }
+
+  50% {
+    right: 130px; }
+
+  100% {
+    right: 120px; } }
+
+@-webkit-keyframes arrow2 {
+  0% {
+    right: 120px; }
+
+  50% {
+    right: 130px; }
+
+  100% {
+    right: 120px; } }
+
+.remote {
+  position: absolute;
+  right: 80px;
+  top: 20px;
+  background: url(../img/sprite.png);
+  background-position: -100px -425px !important;
+  display: block;
+  height: 250px;
+  width: 253px;
+  background-repeat: no-repeat;
+  z-index: 3; }

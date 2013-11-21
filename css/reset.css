@@ -6,3 +6,4 @@ ol, ul {list-style: none;}
 blockquote, q {quotes: none;}
 blockquote:before, blockquote:after,q:before, q:after {content: '';content: none;}
 table {border-collapse: collapse;border-spacing: 0;}
+img { background: transparent; -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF)";filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF); zoom: 1; }
