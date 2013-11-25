@@ -168,7 +168,7 @@ ul.icons.anim li {
 @keyframes horizontalanim {
   0% {
     top: -50px;
-    opacity: 0; }
+    opacity: 1; }
 
   1% {
     top: -50px;
@@ -185,7 +185,7 @@ ul.icons.anim li {
 @-webkit-keyframes horizontalanim {
   0% {
     top: -50px;
-    opacity: 0; }
+    opacity: 1; }
 
   1% {
     top: -50px;
@@ -388,7 +388,8 @@ ul.icons.anim {
   background-repeat: no-repeat;
   z-index: 4;
   animation: arrow2 2s infinite;
-  -webkit-animation: arrow2 2s infinite; }
+  -webkit-animation: arrow2 2s infinite;
+  opacity: 0; }
 
 @keyframes arrow2 {
   0% {
