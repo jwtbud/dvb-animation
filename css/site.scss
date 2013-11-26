@@ -249,7 +249,7 @@
 		background: $icons-url;
 		width: 1000px;
 		left: 0px;
-		opacity: 0
+		opacity: 0;
 	}
 
 	ul.icons.anim li {
@@ -275,7 +275,7 @@
 		}
 
 ul.icons.anim {
-	margin-top: -60px !important; position: absolute; opacity: 0.9;
+	margin-top: -60px !important; position: absolute; opacity: 0.9; 
 
 		li.icon1 {
 		animation: horizontalanim 5s infinite linear !important;
@@ -375,6 +375,7 @@ ul.icons.anim {
 		width: 375px;	
 		background-repeat: no-repeat;
 		z-index: 5;
+		opacity: 0
 	}
 	
 	.tvon-final {
